@@ -4,6 +4,11 @@ body {
   font-family: Helvetica, Sans-Serif;
 }
 
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
 #landing {
   background: url(img/main.jpg);
   background-size: cover;
@@ -16,7 +21,7 @@ body {
   position: relative;
   top: calc(50% - 78px);
   opacity: 0;
-  animation: fadeIn 1s ease-out forwards 1s;
+  animation: fadeIn .7s ease-out forwards 1.5s;
 }
 
 #landing .title h1 {
@@ -30,6 +35,7 @@ body {
   padding: 15px 30px;
   border: none;
   color: white;
+  border-radius: 5px;
 }
 
 nav ul {
@@ -47,7 +53,7 @@ nav li {
 }
 
 nav li a {
-  color: #fff;
+  color: #ccc;
   text-decoration: none;
 }
 
@@ -61,7 +67,9 @@ nav #logo {
 }
 
 hr {
-  width: 60px;
+  width: 200px;
+  border-top: 2px solid #3333ff;
+  margin-top: 30px;
 }
 
 #gallery .mountains1, #gallery .mountains2 {
@@ -74,11 +82,11 @@ hr {
 }
 
 #gallery .long-img {
-  flex-basis: 65%;
+  flex-basis: 70%;
 }
 
 #gallery .short-img {
-  flex-basis: 35%;
+  flex-basis: 30%;
 }
 
 #gallery #img1 {
@@ -110,11 +118,36 @@ hr {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(-35%);
+    transform: translateY(-40%);
   }
 
   100% {
     opacity: 1;
     transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 768px) and (min-width: 577px) {
+  #gallery .long-img {
+    flex-basis: 50%;
+  }
+
+  #gallery .short-img {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  #gallery .mountains1, #gallery .mountains2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+    #gallery .long-img {
+    flex-basis: 100%;
+  }
+
+  #gallery .short-img {
+    flex-basis: 100%;
   }
 }
