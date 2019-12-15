@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Sans-Serif;
+}
+
+#landing {
+  background: url(img/main.jpg);
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+#landing .title {
+  position: relative;
+  top: calc(50% - 78px);
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards 1s;
+}
+
+#landing .title h1 {
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+#landing .title button {
+  background: #3333ff;
+  outline: none;
+  padding: 15px 30px;
+  border: none;
+  color: white;
+}
+
+nav ul {
+ display: flex;
+ list-style: none;
+ font-size: 1em;
+ margin: 0;
+ padding: 20px 40px;
+ justify-content: flex-end;
+}
+
+nav li {
+  padding: 10px;
+  margin: 0;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav #logo {
+  margin-right: auto;
+  padding-left: 0;
+}
+
+#gallery {
+  text-align: center;
+}
+
+hr {
+  width: 60px;
+}
+
+#gallery .mountains1, #gallery .mountains2 {
+  display: flex;
+}
+
+#gallery .bg {
+  height: 250px;
+  margin: 20px;
+}
+
+#gallery .long-img {
+  flex-basis: 65%;
+}
+
+#gallery .short-img {
+  flex-basis: 35%;
+}
+
+#gallery #img1 {
+  background: url(img/mountain1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#gallery #img2 {
+  background: url(img/mountain2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#gallery #img3 {
+  background: url(img/mountain3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#gallery #img4 {
+  background: url(img/mountain4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-35%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
